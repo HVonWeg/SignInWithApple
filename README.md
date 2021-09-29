@@ -1,2 +1,2 @@
 # SignInWithApple
-Sign in with Appel and with SwiftUI
+Example SwiftUI App to sign in with Apple.
