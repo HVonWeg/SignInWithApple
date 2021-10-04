@@ -25,8 +25,7 @@ However, it was a lot of fun and I will use this in my private project.
 
 ### Building
 
-This project contains no dependencies. Just check out the project and start it on your device.
-For testing on the device, you need a provisioning profile with „Sign In with Apple“ enabled.
+This project does not contain any dependencies. Just try the project and launch it on your device. To test on your device, you need a provisioning profile with "Sign in to Apple" enabled.
 
 ---
 
