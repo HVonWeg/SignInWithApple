@@ -2,6 +2,13 @@
 
 Example SwiftUI App to sign in with Apple and Biometrics (FaceID).
 
+<p align="center">
+<img height="300" src="https://github.com/HVonWeg/SignInWithApple/blob/main/login.png" />
+</p>
+
+# SignInWithApple
+
+
 ### Description
 With the app, I wanted to acquire the knowledge of how registration works with AppleID and Biometrics.
 The app still needs improvement at various points, these will be implemented over time.
