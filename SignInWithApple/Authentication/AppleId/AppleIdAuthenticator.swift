@@ -25,28 +25,21 @@ class AppleIdAuthenticator: ObservableObject {
         
         // Adding observer for checking if the user revokes Apple-ID for this app.
         
-        // Register Notification: WillEnterForeground
+        // Add Observer: will enter foreground
         NotificationCenter.default.addObserver(
-            self,
-            selector: #selector(applicationWillEnterForeground(_:)),
-            name: UIApplication.willEnterForegroundNotification,
-            object: nil)
+            forName: UIApplication.willEnterForegroundNotification,
+            object: nil,
+            queue: nil) { notification in
+                self.checkCredentialState()
+            }
         
-        // Register Notification: CredentialRevokedNotification
+        // Add Observer: credential revoked notification
         NotificationCenter.default.addObserver(
-            self,
-            selector: #selector(credentialRevoke(_:)),
-            name: ASAuthorizationAppleIDProvider.credentialRevokedNotification,
-            object: nil)
-    }
-    
-    @objc private func applicationWillEnterForeground(_ notification: NSNotification) {
-        checkCredentialState()
-    }
-    
-    @objc private func credentialRevoke(_ notification: NSNotification) {
-        // If the user revokes the AppleID in the iPhone settings, validating via FaceID is still ok.
-        userAuth.invalidateUser(completion: nil)
+            forName: ASAuthorizationAppleIDProvider.credentialRevokedNotification,
+            object: nil,
+            queue: nil) { notification in
+                self.userAuth.invalidateUser(completion: nil)
+            }
     }
     
     private func checkCredentialState() {
