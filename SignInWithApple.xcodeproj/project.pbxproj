@@ -14,7 +14,7 @@
 		524D85D62704D89900B01C9A /* SignInWithAppleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524D85D52704D89900B01C9A /* SignInWithAppleUITests.swift */; };
 		524D85E62704E61E00B01C9A /* LoginHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524D85E52704E61E00B01C9A /* LoginHeaderView.swift */; };
 		524D85FD2704FE2400B01C9A /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524D85FC2704FE2400B01C9A /* UserModel.swift */; };
-		524D86002705B14400B01C9A /* AppleIdCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524D85FF2705B14400B01C9A /* AppleIdCoordinator.swift */; };
+		524D86002705B14400B01C9A /* AppleIdAuthenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524D85FF2705B14400B01C9A /* AppleIdAuthenticator.swift */; };
 		524D86052705D8AA00B01C9A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524D86042705D8AA00B01C9A /* HomeView.swift */; };
 		524D86082705ECA200B01C9A /* AppleIdCoordinator+Registration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524D86072705ECA200B01C9A /* AppleIdCoordinator+Registration.swift */; };
 		524D86432706F06C00B01C9A /* UserAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524D86422706F06C00B01C9A /* UserAuth.swift */; };
@@ -73,7 +73,7 @@
 		524D85E52704E61E00B01C9A /* LoginHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginHeaderView.swift; sourceTree = "<group>"; };
 		524D85FA2704F13800B01C9A /* SignInWithApple.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SignInWithApple.entitlements; sourceTree = "<group>"; };
 		524D85FC2704FE2400B01C9A /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
-		524D85FF2705B14400B01C9A /* AppleIdCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleIdCoordinator.swift; sourceTree = "<group>"; };
+		524D85FF2705B14400B01C9A /* AppleIdAuthenticator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleIdAuthenticator.swift; sourceTree = "<group>"; };
 		524D86042705D8AA00B01C9A /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		524D86072705ECA200B01C9A /* AppleIdCoordinator+Registration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppleIdCoordinator+Registration.swift"; sourceTree = "<group>"; };
 		524D86422706F06C00B01C9A /* UserAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuth.swift; sourceTree = "<group>"; };
@@ -268,7 +268,7 @@
 		524D865E2709699000B01C9A /* AppleId */ = {
 			isa = PBXGroup;
 			children = (
-				524D85FF2705B14400B01C9A /* AppleIdCoordinator.swift */,
+				524D85FF2705B14400B01C9A /* AppleIdAuthenticator.swift */,
 				524D86072705ECA200B01C9A /* AppleIdCoordinator+Registration.swift */,
 			);
 			path = AppleId;
@@ -533,7 +533,7 @@
 				524D85FD2704FE2400B01C9A /* UserModel.swift in Sources */,
 				524D86BA270A00A700B01C9A /* LaunchArgumentsHandler.swift in Sources */,
 				524D8651270756CD00B01C9A /* HintMessageView.swift in Sources */,
-				524D86002705B14400B01C9A /* AppleIdCoordinator.swift in Sources */,
+				524D86002705B14400B01C9A /* AppleIdAuthenticator.swift in Sources */,
 				524D86572708719B00B01C9A /* UserAuthStorageable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

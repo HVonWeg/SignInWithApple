@@ -20,7 +20,7 @@ struct SignInWithAppleView: View {
     
     // Obserable objects
     @EnvironmentObject var userauth: UserAuth
-    @ObservedObject var appleIDCoordinator: AppleIdCoordinator
+    @ObservedObject var appleIDCoordinator: AppleIdAuthenticator
     
     var shouldTryBiometricAuthentication: Bool {
         userauth.user != nil
@@ -139,7 +139,7 @@ struct ContentView_Previews: PreviewProvider {
         let storage = UserDefaultStorage()
         let userAuth = UserAuth(storage: storage)
         SignInWithAppleView(
-            appleIDCoordinator: AppleIdCoordinator(userAuth: userAuth)
+            appleIDCoordinator: AppleIdAuthenticator(userAuth: userAuth)
         ).environmentObject(userAuth)
     }
 }

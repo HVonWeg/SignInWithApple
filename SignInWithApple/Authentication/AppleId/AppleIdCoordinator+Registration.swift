@@ -9,7 +9,7 @@ import AuthenticationServices
 
 // MARK: - SignInWithApple Handler
 
-extension AppleIdCoordinator {
+extension AppleIdAuthenticator {
     
     func onRequest(_ request: ASAuthorizationAppleIDRequest) {
         // TODO: using nonce and state to prevent replay attacks
@@ -36,7 +36,7 @@ extension AppleIdCoordinator {
     
 }
 
-extension AppleIdCoordinator {
+extension AppleIdAuthenticator {
     
     // MARK: - Public methods
     

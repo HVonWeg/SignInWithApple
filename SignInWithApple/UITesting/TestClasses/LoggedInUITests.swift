@@ -6,6 +6,7 @@
 //
 
 #if DEBUG
+
 import Foundation
 
 class LoggedInUITests: NSObject, UITestable {

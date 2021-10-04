@@ -5,11 +5,9 @@
 //  Created by Heiko von Wegerer on 30.09.21.
 //
 
-import Foundation
 import AuthenticationServices
-import SwiftUI
 
-class AppleIdCoordinator: ObservableObject {
+class AppleIdAuthenticator: ObservableObject {
     
     var userAuth: UserAuthStorageable
     

@@ -19,10 +19,10 @@ struct SignInWithAppleApp: App {
     /// Should be run always for listening the following notifications, to validate the credential state:
     /// - willEnterForegroundNotification
     /// - credentialRevokedNotification
-    private(set) var appleIdCoordinator: AppleIdCoordinator!
+    private(set) var appleIdCoordinator: AppleIdAuthenticator!
     
     init() {
-        self.appleIdCoordinator = AppleIdCoordinator(userAuth: self.userauth)
+        self.appleIdCoordinator = AppleIdAuthenticator(userAuth: self.userauth)
         appDelegate.userAuth = userauth
     }
     

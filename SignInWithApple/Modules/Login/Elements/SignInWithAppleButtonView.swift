@@ -10,7 +10,7 @@ import AuthenticationServices
 
 struct SignInWithAppleButtonView: View {
     
-    var appleIdCoordinator: AppleIdCoordinator
+    var appleIdCoordinator: AppleIdAuthenticator
     
     var body: some View {
         SignInWithAppleButton(.signIn,

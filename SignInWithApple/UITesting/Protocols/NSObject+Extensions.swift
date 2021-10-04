@@ -5,6 +5,8 @@
 //  Created by Heiko von Wegerer on 03.10.21.
 //
 
+#if DEBUG
+
 import Foundation
 
 extension NSObject {
@@ -16,3 +18,5 @@ extension NSObject {
         return nil
     }
 }
+
+#endif
