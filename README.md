@@ -32,7 +32,7 @@ This project does not contain any dependencies. Just try the project and launch 
 ### Todo´s
 * create constants for texts
 * create color constants
-* storage user date into keychain, not in user defaults (not secure!)
+* storage user data into keychain, not in user defaults (not secure!)
 * Check what happens when the user logs out (in the iPhone Settings), and register with a new one...
 * create User Settings (register with Biometrics should be enabled/disabled by the user)
 * Write more unit and UI tests
