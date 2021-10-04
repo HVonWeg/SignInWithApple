@@ -18,7 +18,7 @@ However, it was a lot of fun and I will use this in my private project.
 ### Features
 * First Login: Sign in with Apple
 * Second Login: also via Biometrics possible
-* Coldstart: bypass the Login screen when the user opens the app the second time.
+* Coldstart: if the user is already logged in with the Apple ID, the login screen can be bypassed when the user opens the app for the second time
 * Warmstart: same screen state as before (should be show the Login Screen after x minutes, see Todo´s)
 * Some unit tests and ui tests
 * Logout possible
