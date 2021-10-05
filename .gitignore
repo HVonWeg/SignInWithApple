@@ -1,0 +1,24 @@
+# Xcode
+#
+# gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
+
+## Build generated
+build/
+DerivedData/
+
+## Various settings
+xcuserdata/
+
+## Other
+*.moved-aside
+*.xccheckout
+*.xcscmblueprint
+*.xcuserstate
+*.DS_Store
+*.DS_Store?
+*.orig
+
+## Obj-C/Swift specific
+*.ipa
+*.dSYM.zip
+*.dSYM
