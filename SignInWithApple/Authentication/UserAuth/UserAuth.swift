@@ -24,6 +24,8 @@ extension UserAuth {
 
 class UserAuth: ObservableObject {
     
+    // MARK: - Published vars
+    
     @Published var user: UserModel?
     
     // Tempory variable, if the user is loggedIn.
@@ -44,6 +46,8 @@ class UserAuth: ObservableObject {
         }
     }
     
+    // MARK: - Private vars
+    
     private var storage: UserStorageable
     
     init(storage: UserStorageable) {
@@ -54,8 +58,10 @@ class UserAuth: ObservableObject {
     }
     
     private func logout() {
-        self.loggedInStatus = .loggedOut
-        self.user = nil
+        DispatchQueue.main.async {
+            self.loggedInStatus = .loggedOut
+            self.user = nil
+        }
     }
 }
 
