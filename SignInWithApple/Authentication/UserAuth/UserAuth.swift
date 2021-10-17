@@ -7,18 +7,16 @@
 
 import Foundation
 
-extension UserAuth {
-    /// Keeps the logged in Type of the user.
-    ///
-    /// The user can still log in via FaceId even he revokes the AppleID in the iPhone settings.
-    enum LoggedInStatus: Int {
-        case loggedOut
-        case loggedInViaBiometric
-        case loggedInViaAppleId
-        
-        var isLoggedIn: Bool {
-            self == .loggedInViaBiometric || self == .loggedInViaAppleId
-        }
+/// Keeps the logged in Type of the user.
+///
+/// The user can still log in via FaceId even he revokes the AppleID in the iPhone settings.
+enum LoggedInStatus: Int {
+    case loggedOut
+    case loggedInViaBiometric
+    case loggedInViaAppleId
+    
+    var isLoggedIn: Bool {
+        self != .loggedOut
     }
 }
 
@@ -57,10 +55,13 @@ class UserAuth: ObservableObject {
         }
     }
     
-    private func logout() {
+    private func logout(completion: CompletionHandler?) {
         DispatchQueue.main.async {
             self.loggedInStatus = .loggedOut
             self.user = nil
+            if let completion = completion {
+                completion()
+            }
         }
     }
 }
@@ -99,22 +100,14 @@ extension UserAuth: UserAuthStorageable {
     
     func logoutUser(completion: CompletionHandler?) {
         storage.deleteUserData() {
-            self.logout()
-            if let completion = completion {
-                completion()
-            }
+            self.logout(completion: completion)
         }
     }
     
-    func invalidateUser(completion: CompletionHandler?) {
-        storage.invalidateUserData() {
-            if self.loggedInStatus == .loggedInViaAppleId {
-                self.logout()
-            }
-            if let completion = completion {
-                completion()
-            }
-        }
+    func invalidateUser(completion: @escaping CompletionHandler) {
+        let user = UserModel(email: nil, name: nil, identifier: nil)
+        self.user = user
+        storage.saveUserData(user, completion: completion)
     }
     
     func signInWithExistingAccount(identifier: String, completion: CompletionHandler?) {

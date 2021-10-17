@@ -46,8 +46,4 @@ extension UserDefaultStorage: UserStorageable {
         UserDefaults.standard.removeObject(forKey: self.keyUser)
         completion()
     }
-    
-    func invalidateUserData(completion: @escaping CompletionHandler) {
-        self.saveUserData(UserModel(email: nil, name: nil, identifier: nil), completion: completion)
-    }
 }

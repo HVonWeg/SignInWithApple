@@ -29,10 +29,10 @@ struct HomeView: View {
             Spacer()
             // Logout Button
             LogoutButton {
-                userauth.logoutUser { }
+                userauth.logoutUser(completion: nil)
             }
         }.background(
-            Image("background_2")
+            Image(Image.Names.backgroundBlue)
         )
     }
 }

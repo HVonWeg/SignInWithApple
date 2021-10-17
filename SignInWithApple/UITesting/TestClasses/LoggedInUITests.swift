@@ -16,7 +16,7 @@ class LoggedInUITests: NSObject, UITestable {
         nameComponents.familyName = "von Wegerer"
         nameComponents.givenName = "Heiko"
         let user = UserModel(email: "foobar@gmail.com", name: nameComponents, identifier: "388484833823")
-        userAuth.registerUser(user) { }
+        userAuth.registerUser(user, completion: nil)
     }
 }
 

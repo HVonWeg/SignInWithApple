@@ -114,26 +114,3 @@ extension UserDefaultStorageTests {
         waitForExpectations(timeout: 3, handler: nil)
     }
 }
-
-// MARK: - Invalidate User data
-
-extension UserDefaultStorageTests {
-    func testInvalidateUser_userDataFieldsShouldBeNil() throws {
-        let expectation = self.expectation(description: "User data fetched")
-        storeDefaultUser {
-            storage.invalidateUserData {
-                self.storage.getUserData { user in
-                    if let user = user {
-                        XCTAssertNil(user.identifier)
-                        XCTAssertNil(user.name)
-                        XCTAssertNil(user.name)
-                        expectation.fulfill()
-                    } else {
-                        XCTFail()
-                    }
-                }
-            }
-        }
-        waitForExpectations(timeout: 3, handler: nil)
-    }
-}

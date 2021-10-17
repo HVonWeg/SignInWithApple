@@ -17,6 +17,9 @@ protocol UserAuthStorageable {
     /// Returns true, if the user is logged in.
     var isLoggedIn: Bool { get }
     
+    /// Returns the  loggedIn status of the user.
+    var loggedInStatus: LoggedInStatus { get }
+    
     /// Logouts the user.
     ///
     /// The user data will be also deleted from the UserStorage.
@@ -29,8 +32,8 @@ protocol UserAuthStorageable {
     
     /// Invalidates the user data in the storage.
     ///
-    /// All data will be removed from the user.
-    func invalidateUser(completion: CompletionHandler?)
+    /// Email, Name and the Apple-Id is set to nil.
+    func invalidateUser(completion: @escaping CompletionHandler)
     
     /// Sign in with the user with the given user.
     ///

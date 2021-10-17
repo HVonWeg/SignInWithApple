@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		524D1FB72719D16700A18E32 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524D1FB62719D16700A18E32 /* Constants.swift */; };
+		524D1FB92719D5DF00A18E32 /* ConstantsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524D1FB82719D5DF00A18E32 /* ConstantsTests.swift */; };
 		524D85BB2704D89400B01C9A /* SignInWithAppleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524D85BA2704D89400B01C9A /* SignInWithAppleApp.swift */; };
 		524D85BD2704D89400B01C9A /* SignInWithAppleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524D85BC2704D89400B01C9A /* SignInWithAppleView.swift */; };
 		524D85BF2704D89800B01C9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 524D85BE2704D89800B01C9A /* Assets.xcassets */; };
@@ -62,6 +64,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		524D1FB62719D16700A18E32 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		524D1FB82719D5DF00A18E32 /* ConstantsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsTests.swift; sourceTree = "<group>"; };
 		524D85B72704D89400B01C9A /* SignInWithApple.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SignInWithApple.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		524D85BA2704D89400B01C9A /* SignInWithAppleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleApp.swift; sourceTree = "<group>"; };
 		524D85BC2704D89400B01C9A /* SignInWithAppleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleView.swift; sourceTree = "<group>"; };
@@ -153,6 +157,7 @@
 				524D86B8270A008200B01C9A /* App */,
 				524D85FA2704F13800B01C9A /* SignInWithApple.entitlements */,
 				524D85BA2704D89400B01C9A /* SignInWithAppleApp.swift */,
+				524D1FB62719D16700A18E32 /* Constants.swift */,
 				524D864B27074CA600B01C9A /* Modules */,
 				524D85E42704E5F200B01C9A /* SharedElements */,
 				524D864E27074D8700B01C9A /* Storage */,
@@ -175,6 +180,7 @@
 		524D85CA2704D89900B01C9A /* SignInWithAppleTests */ = {
 			isa = PBXGroup;
 			children = (
+				524D1FB82719D5DF00A18E32 /* ConstantsTests.swift */,
 				524D866A2709B86500B01C9A /* Helper */,
 				524D866127098A7F00B01C9A /* Authentication */,
 			);
@@ -535,6 +541,7 @@
 				524D8651270756CD00B01C9A /* HintMessageView.swift in Sources */,
 				524D86002705B14400B01C9A /* AppleIdAuthenticator.swift in Sources */,
 				524D86572708719B00B01C9A /* UserAuthStorageable.swift in Sources */,
+				524D1FB72719D16700A18E32 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -545,6 +552,7 @@
 				524D866427098AA400B01C9A /* UserAuthTests.swift in Sources */,
 				524D86692709B6D200B01C9A /* BaseAuthTest.swift in Sources */,
 				524D86672709939400B01C9A /* UserDefaultStorageTests.swift in Sources */,
+				524D1FB92719D5DF00A18E32 /* ConstantsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

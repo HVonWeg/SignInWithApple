@@ -131,9 +131,18 @@ extension UserAuthTests {
         let expectation = self.expectation(description: "User should be invalidated")
         userAuth.registerUser(user) {
             self.userAuth.invalidateUser {
-                XCTAssertNil(self.userAuth.user)
-                XCTAssertFalse(self.userAuth.isLoggedIn)
-                XCTAssertTrue(self.userAuth.loggedInStatus == .loggedOut)
+                
+                if let user = self.userAuth.user {
+                    XCTAssertNil(user.identifier)
+                    XCTAssertNil(user.email)
+                    XCTAssertNil(user.name)
+                } else {
+                    XCTFail()
+                }
+                
+                XCTAssertNotNil(self.userAuth.user)
+                XCTAssertTrue(self.userAuth.isLoggedIn)
+                XCTAssertTrue(self.userAuth.loggedInStatus == .loggedInViaAppleId)
                 expectation.fulfill()
             }
         }

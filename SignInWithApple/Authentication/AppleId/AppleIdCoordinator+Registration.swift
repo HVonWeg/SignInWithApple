@@ -62,7 +62,7 @@ extension AppleIdAuthenticator {
         if let email = credential.email, let fullName = credential.fullName {
             let user = UserModel(email: email, name: fullName, identifier: credential.user)
             // Set new user data + write it to the storage
-            userAuth.registerUser(user) { }
+            userAuth.registerUser(user, completion: nil)
         }
     }
     

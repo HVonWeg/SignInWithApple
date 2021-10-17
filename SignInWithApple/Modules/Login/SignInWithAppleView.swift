@@ -12,10 +12,8 @@ struct SignInWithAppleView: View {
     
     // States
     @State private var forceLogin = false
-    
     @State private var hintMessage: String? = nil
     @State private var errorMessage: String? = nil
-    
     @State private var signInWithBiometricsEnabled = false
     
     // Obserable objects
@@ -69,7 +67,7 @@ struct SignInWithAppleView: View {
                     .frame(height: 50)
                 
             }.background(
-                Image("background_2")
+                Image(Image.Names.backgroundBlue)
             ).onAppear {
                 canAuthenticationWithBiometrics()
             }
@@ -138,8 +136,8 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         let storage = UserDefaultStorage()
         let userAuth = UserAuth(storage: storage)
-        SignInWithAppleView(
-            appleIDCoordinator: AppleIdAuthenticator(userAuth: userAuth)
+        let appleIdAuthenticator = AppleIdAuthenticator(userAuth: userAuth)
+        SignInWithAppleView(appleIDCoordinator: appleIdAuthenticator
         ).environmentObject(userAuth)
     }
 }

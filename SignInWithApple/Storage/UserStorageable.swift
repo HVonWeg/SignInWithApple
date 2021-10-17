@@ -21,9 +21,4 @@ protocol UserStorageable {
     /// Delete the all Info User infos from the storage.
     /// Should be used for logut.
     func deleteUserData(completion: @escaping CompletionHandler)
-    
-    /// Removes the values of the user info in the storage.
-    /// Should be called e.g., if the user revokes the AppleID in the iPhone settings.
-    func invalidateUserData(completion: @escaping CompletionHandler)
-    
 }

@@ -18,7 +18,7 @@ struct SignInWithBiometricsView: View {
             Spacer()
         }
         .background(
-            Image("background_2")
+            Image(Image.Names.backgroundBlue)
         )
     }
 }
